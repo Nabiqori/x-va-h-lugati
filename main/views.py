@@ -21,7 +21,7 @@ class HomeView(View):
                     incorrect_words = Incorrect.objects.filter(correct=correct_word)
                 else:
                     if 'x' not in search.lower() and 'h' not in search.lower():
-                        correct_word = False
+                        correct_word = "Soz tarkibida x yoki h harfi yoq"
                         incorrect_words = False
                     else:
                         correct_word = "bu soz omborda yoq"

@@ -28,11 +28,11 @@
           <div class="main-container__main__correct-answers">
             <ul style="list-style-image: url({% static 'icons/correct-mark.png' %});">
               <!--style="align-items: center" -->
-              {% if correct_word == False %}
+              {% if correct_word == "Soz tarkibida x yoki h harfi yoq" %}
               <li>Soz tarkibida x yoki h harfi yoq</li>
 
               {% elif correct_word == 'bu soz omborda yoq' %}
-              <li>Soz tarkibida x yoki h harfi yoq</li>
+              <li>{{ correct_word }}</li>
 
               {% elif correct_word %}
               <li>{{ correct_word.word }}</li>
@@ -41,11 +41,11 @@
           </div>
           <div class="main-container__main__incorrect-answers">
             <ul style="list-style-image: url({% static 'icons/incorrect-mark.png' %});">
-              {% if correct_word == False %}
+              {% if correct_word == "Soz tarkibida x yoki h harfi yoq" %}
               <li>Soz tarkibida x yoki h harfi yoq</li>
 
               {% elif correct_word == 'bu soz omborda yoq' %}
-              <li>Soz tarkibida x yoki h harfi yoq</li>
+              <li>{{ correct_word }}</li>
 
               {% elif correct_word %}
                {% for incorrect in incorrect_words %}
